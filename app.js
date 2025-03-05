@@ -1,4 +1,25 @@
 
+// on-click Menu............................................. 
+
+let menu = document.querySelector(".menu")
+let slider = document.querySelector(".slider")
+let sliderConstant = true;
+
+
+menu.addEventListener("click" , () =>{
+
+    if(sliderConstant == true){
+        slider.style.transform = 'translate(0%)'
+        sliderConstant = false;
+    }
+    else{
+        console.log("Hello !!!");
+        slider.style.transform = 'translate(-110%)'
+        sliderConstant = true;
+    }
+})
+
+
 // heart color change............................................. 
 
 let heart = document.querySelector(".fav")
@@ -32,7 +53,7 @@ if(time>=12 && time<18){
 if(time>=18 && time<23){
     msg = `<p>Hii user <br> Good Evening</p>`
 }
-if(time>=23 && time<5){
+if(time>=23 || time == 24 || time>=0 && time<5){
     msg = `<p>Hii user <br> go to bed !!!</p>`
 }
 
